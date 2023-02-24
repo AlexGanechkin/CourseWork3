@@ -1,5 +1,5 @@
 import pytest
-import main
+import app
 
 
 """ Создаем фикстуру для тестирования API вьюшек """
