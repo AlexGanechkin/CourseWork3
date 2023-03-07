@@ -2,7 +2,7 @@ name: Build and Deploy Simple Flask App
 on: [push]
 jobs:
   build_and_push:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: cloning code
         uses: actions/checkout@v2
