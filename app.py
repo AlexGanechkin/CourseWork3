@@ -30,4 +30,6 @@ def no_page(e):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=80)
+
+# dckr_pat_64OzWae2d-Sr2kBP6Oo3aOsuQug

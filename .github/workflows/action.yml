@@ -1,0 +1,14 @@
+name: Build and Deploy Simple Flask App
+on: [push]
+jobs:
+  build_and_push:
+    runs_on: ubuntu-latest
+    steps:
+      - name: cloning code
+        uses: actions/checkout@v2
+      - name: building docker image
+        run: docker build -t alexjohanson/flask-app:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
+      - name: logging docker
+        run: echo ${{ secrets.DOCKER_TOKEN }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+      - name: pushing docker image
+        run: docker push alexjohanson/flask-app:$GITHUB_REF_NAME-$GITHUB_RUN_ID

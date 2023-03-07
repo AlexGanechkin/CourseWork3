@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  api:
+    image: alexjohanson/flask-app:ver-1
+    ports:
+      - 80:80
+    volumes:
+      - ./data:/code/data
