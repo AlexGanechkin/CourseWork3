@@ -32,7 +32,7 @@ jobs:
           target: "flask-app"
           strip_components: 1
       - name: running docker-compose
-        uses: appleyboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.8
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.HOST_USERNAME }}
